@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            body {
+                transform: rotate(270deg);
+                margin: 0;
+                height: 0;
+                width: 300px;
+            }
+            div {
+                height: 3px;
+                position: absolute;
+                transform-origin: left;
+            }
+            main{
+                padding: 10% -50%;
+                height: 100px;
+                width: 100px;
+            }
+            #seconds {
+                width: 100px;
+                background-color: red;
+            }
+            #minutes {
+                width: 100px;
+                background-color: black;
+            }
+            #hours {
+                width: 80px;
+                background-color: grey;
+            }
+        </style>
+    </head>
+    <body onload="setInterval(load, 500)">
+        <main>
+            <div id="seconds"></div>
+            <div id="minutes"></div>
+            <div id="hours"></div>
+            <p style=" transform: rotate(90deg) translate(35px, -60px);">12</p> 
+            <p style=" transform: rotate(90deg) translate(-110px, 50px);">9</p>
+            <p style=" transform: rotate(90deg) translate(-30px, 160px);">6</p> 
+            <p style=" transform: rotate(90deg) translate(50px, 50px);">3</p>  
+        </main>
+    
+        <script>
+            function load() {
+                let seconds = new Date().getSeconds() * 6, minutes = new Date().getMinutes() * 6, hours = new Date().getHours() * 30
+
+                document.getElementById("seconds").style.transform = `rotate(${seconds}deg)`
+                document.getElementById("minutes").style.transform = `rotate(${minutes}deg)`
+                document.getElementById("hours").style.transform = `rotate(${hours}deg)`
+            }
+        </script>
+
+        <!-- <script>
+            //offline clock
+            let seconds = 0, minutes = 0, hours = 0
+
+            function load() {
+                seconds == 360 ? (seconds = 0, minutes += 6) : seconds = seconds
+                minutes == 360 ? (minutes = 0, hours += 30) : minutes = minutes
+                seconds += 6
+                
+                document.getElementById("seconds").style.transform = `rotate(${seconds}deg)`
+                document.getElementById("minutes").style.transform = `rotate(${minutes}deg)`
+                document.getElementById("hours").style.transform = `rotate(${hours}deg)`
+            }
+        </script> -->
+    </body>
+</html>
