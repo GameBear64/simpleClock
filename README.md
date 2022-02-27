@@ -1,3 +1,5 @@
 # Simple Clock
-A really shitty clock that i made for fun  
-I made it in like an hour coz i was bored
+A clock that i made for fun because i was bored using simple html css and js
+
+Result:  
+![The clock](https://cdn.discordapp.com/attachments/577218227885834261/947473363708817418/unknown.png)
